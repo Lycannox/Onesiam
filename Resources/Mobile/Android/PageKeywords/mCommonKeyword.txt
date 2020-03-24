@@ -1,6 +1,5 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource          Redefine_Keywords.txt
 Resource          ../PageVariables/mCommonPageVariables.txt
 Resource          ../PageRepositorys/mCommonPageRepositorys.txt
 
