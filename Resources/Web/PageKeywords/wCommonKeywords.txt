@@ -1,0 +1,4 @@
+*** Settings ***
+Resource          ../PageRepositorys/wCommonPageRepositorys.txt
+Resource          Redefine_Keywords.txt
+Resource          ../PageVariables/wCommonPageVariables.txt
