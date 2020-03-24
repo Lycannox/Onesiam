@@ -3,3 +3,4 @@ ${GalaxyS8}       Galaxy S8
 ${JsonfilePath}    C:\\gitlab\\SiamPiwat-automated\\ExConfig\\D_7225.json
 ${AppPackage}     com.onesiam.siampiwat
 ${AppActivity}    com.onesiam.siampiwat.activitys.SplashScreenActivity
+${timeout}        60

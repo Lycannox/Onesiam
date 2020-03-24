@@ -92,7 +92,7 @@
 						"platformVersion": "8.0.0",
 						"deviceName": "ad0117020ca18513e2",
 						"automationName": "UiAutomator2",
-					    "IPAppium": "192.168.1.37:4723",
+					    "IPAppium": "192.168.1.36:4723",
 					    "appPackage": "com.onesiam.siampiwat",
 					    "appActivity": "com.onesiam.siampiwat.activitys.SplashScreenActivity",
 					    "noReset": "true",

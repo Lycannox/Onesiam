@@ -1,9 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
-Library           Dialogs
-Library           OperatingSystem
-Library           Collections
-Library           String
+Resource          Redefine_Keywords.txt
 Resource          ../PageVariables/CommonPageVariables.txt
 
 *** Keywords ***
@@ -53,3 +50,9 @@ mPrint Detail Selected Device
     ${Set_New_Var}    Set Variable    ${set_New_Var['${DeviceName}']}
     ${Set_New_Var}    Set Variable    ${Set_New_Var[0]}
     [Return]    ${Set_New_Var}
+
+mLoginFacebook
+    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[@text='เข้าสู่ระบบด้วย facebook']    ${timeout}
+    AppiumLibrary.Click Element    xpath=//android.view.View[@text='เข้าสู่ระบบด้วย facebook']
+
+mLoginLine
