@@ -1,0 +1,35 @@
+<config>
+	
+	<device name="SAMSUNG3PE" state="Normal" timestamp="2019-04-29 16:48:31.967000">
+		<tags>
+			<tag status="include">TAB</tag>
+		</tags>
+		<default>
+			<item name="SN" type="Scalar">
+				<value>a5d31894</value>
+			</item>
+			<item name="IPAppium" type="Scalar">
+				<value>192.168.1.150:4723</value>
+			</item>
+			<item name="Platfrom_Name" type="Scalar">
+				<value>Android</value>
+			</item>
+			<item name="Platfrom_Version" type="Scalar">
+				<value>7.1.1</value>
+			</item>
+			<item name="Number" type="Scalar">
+				<value>0923122875</value>
+			</item>
+			<item name="ID_Citizen" type="Scalar">
+				<value>a5730c92</value>
+			</item>
+			<item name="Language" type="Scalar">
+				<value>TH</value>
+			</item>
+			<item name="Slot" type="Scalar">
+				<value>1</value>
+			</item>
+		</default>			
+	</device>
+	
+</config>

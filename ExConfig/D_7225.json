@@ -1,0 +1,140 @@
+{
+	"Data": [
+		{
+		"Galaxy A8": [
+				{
+					"platformName": "Android",
+					"platformVersion": "9",
+					"deviceName": "5200547f537f25d5",
+					"automationName": "UiAutomator2",
+					"IPAppium": "10.239.111.233:4723",
+					"appPackage": "com.ais.digi",
+					"appActivity": "com.ais.digi.activity.MainActivitySSO",
+					"noReset": "true",
+					"unicodeKeyboard": "true",
+					"newCommandTimeout": "3000",
+					"deviceStatus": "Online"
+				}
+			]
+		},
+		{
+		"Galaxy J6+": [
+				{
+					"platformName": "Android",
+					"platformVersion": "9",
+					"deviceName": "ae126896",
+					"automationName": "UiAutomator2",
+					"IPAppium": "10.239.111.233:4723",
+					"appPackage": "com.ais.digi",
+					"appActivity": "com.ais.digi.activity.MainActivitySSO",
+					"noReset": "true",
+					"unicodeKeyboard": "true",
+					"newCommandTimeout": "3000",
+					"deviceStatus": "Online"
+				}
+			]
+		},
+		{
+		"HP30": [
+				{
+					"platformName": "Android",
+					"platformVersion": "9",
+					"deviceName": "DUM0219312008687",
+					"automationName": "UiAutomator2",
+					"IPAppium": "10.239.111.249:4723",
+					"appPackage": "com.ais.digi",
+					"appActivity": "com.ais.digi.activity.MainActivitySSO",
+					"noReset": "true",
+					"unicodeKeyboard": "true",
+					"newCommandTimeout": "3000",
+					"deviceStatus": "Online"
+				}
+			]
+		},
+		{
+		"iPhone 8+": [
+				{
+					"platformName": "IOS",
+					"platformVersion": "12.4",
+					"deviceName": "Mimo's 8+",
+          "IPAppium": "10.239.111.246:4723",
+          "udid" : "0829fc1ceaa6b7db52fbe683caef013013afd749",
+          "bundleId" : "th.co.mimotech.ios.enterprise.digi",
+          "automationName" : "XCUITest",
+          "xcodeOrgId" : "8523W3Q6Y6",
+          "xcodeSigningId" : "iOS Developer",
+					"newCommandTimeout": "3000",
+					"deviceStatus": "Online"
+				}
+			]
+		},
+		{
+		"iPhone XR": [
+				{
+					"platformName": "IOS",
+					"platformVersion": "13.1.2",
+					"deviceName": "Mimo’s XR",
+          "IPAppium": "10.239.111.245:4723",
+          "udid" : "00008020-000969E926F8003A",
+          "bundleId" : "th.co.mimotech.ios.enterprise.digi",
+          "automationName" : "XCUITest",
+          "xcodeOrgId" : "8523W3Q6Y6",
+          "xcodeSigningId" : "iOS Developer",
+					"newCommandTimeout": "3000",
+					"deviceStatus": "Online"
+				}
+			]
+		},
+		{
+			"Galaxy S8": [
+					{
+						"platformName": "Android",
+						"platformVersion": "8.0.0",
+						"deviceName": "ad0117020ca18513e2",
+						"automationName": "UiAutomator2",
+					    "IPAppium": "192.168.1.37:4723",
+					    "appPackage": "com.onesiam.siampiwat",
+					    "appActivity": "com.onesiam.siampiwat.activitys.SplashScreenActivity",
+					    "noReset": "true",
+					    "unicodeKeyboard": "true",
+					    "newCommandTimeout": "3000",
+					    "deviceStatus": "Online"
+					}
+				]
+			},
+			{
+				"Galaxy S8A": [
+						{
+							"platformName": "Android",
+							"platformVersion": "8.0.0",
+							"deviceName": "ce11171be81a1c2403",
+							"automationName": "UiAutomator2",
+							"IPAppium": "10.239.114.95:4723",
+							"appPackage": "com.onesiam.siampiwat",
+							"appActivity": "com.onesiam.siampiwat.activitys.SplashScreenActivity",
+							"noReset": "true",
+							"unicodeKeyboard": "true",
+							"newCommandTimeout": "3000",
+							"deviceStatus": "Online"
+						}
+					]
+				},
+				{
+					"Galaxy S8B": [
+							{
+								"platformName": "Android",
+								"platformVersion": "8.0.0",
+								"deviceName": "ce091719d2adac880d",
+								"automationName": "UiAutomator2",
+								"IPAppium": "10.239.114.95:4723",
+								"appPackage": "com.onesiam.siampiwat",
+								"appActivity": "com.onesiam.siampiwat.activitys.SplashScreenActivity",
+								"noReset": "true",
+								"unicodeKeyboard": "true",
+								"newCommandTimeout": "3000",
+								"deviceStatus": "Online"
+							}
+						]
+					}		
+	]
+}

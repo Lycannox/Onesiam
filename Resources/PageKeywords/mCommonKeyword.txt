@@ -1,0 +1,55 @@
+*** Settings ***
+Library           AppiumLibrary
+Library           Dialogs
+Library           OperatingSystem
+Library           Collections
+Library           String
+Resource          ../PageVariables/CommonPageVariables.txt
+
+*** Keywords ***
+mGetDevices
+    [Arguments]    ${devicesName}    ${configPath}    ${appPackage}    ${appActivity}
+    [Documentation]    This Keyword for Get Data From Devices
+    ...
+    ...    *Format keyword*
+    ...    mGetDevices | ${devicesName} | ${configPath} | ${appPackage} | ${appActivity}
+    ...
+    ...    *Example keyword*
+    ...    mGetDevices | ${DeviceName_Galaxy A8} | ${JsonfilePath} | ${AppNameAisDigi} | ${AppActivityAisDigi}
+    ${Devices}    Get Devices    ${devicesName}    ${configPath}
+    AppiumLibrary.Open Application    http://${Devices['IPAppium']}/wd/hub    platformName=${Devices['platformName']}    platformVersion=${Devices['platformVersion']}    deviceName=${Devices['deviceName']}    appPackage=${appPackage}    appActivity=${appActivity}
+    ...    noReset=true    unicodeKeyboard=true    automationName=UiAutomator2
+
+Get Devices
+    [Arguments]    ${SelectDevices}    ${ConfigPath}
+    [Documentation]    This Keyword for get Devices Detail From Jsonfile
+    ...
+    ...    *Format keyword*
+    ...    Get Devices | ${SelectDevices} | ${ConfigPath}
+    ...
+    ...    *Example keyword*
+    ...    Get Devices | ${devicesName} | ${configPath}
+    ${Json}    Get File    ${ConfigPath}
+    ${Obj}    Evaluate    json.loads("""${Json}""")    json
+    ${Data}    Set Variable    ${Obj['Data']}
+    ${Len}    Get Length    ${Data}
+    : FOR    ${i}    IN RANGE    0    ${Len}
+    \    Log    ${Data[${i}]}
+    \    ${Key}    Get Dictionary Keys    ${Data[${i}]}
+    \    Log    "${Key[0]}" : "${SelectDevices}"
+    \    ${Devices_Detail}    Run Keyword And Return If    "${Key[0]}"=="${SelectDevices}"    mPrint Detail Selected Device    ${Data[${i}]}    ${SelectDevices}
+    [Return]    ${Devices_Detail}
+
+mPrint Detail Selected Device
+    [Arguments]    ${i}    ${DeviceName}
+    [Documentation]    This Keyword for Print Detail Devices
+    ...
+    ...    *Format keyword*
+    ...    mPrint Detail Selected Device | ${i} | ${DeviceName}
+    ...
+    ...    *Example keyword*
+    ...    mPrint Detail Selected Device | ${Data[${i}]} | ${SelectDevices}
+    ${Set_New_Var}    Set Variable    ${i}
+    ${Set_New_Var}    Set Variable    ${set_New_Var['${DeviceName}']}
+    ${Set_New_Var}    Set Variable    ${Set_New_Var[0]}
+    [Return]    ${Set_New_Var}

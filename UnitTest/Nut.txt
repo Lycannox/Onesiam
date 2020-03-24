@@ -1,0 +1,6 @@
+*** Settings ***
+Resource          ../Resources/PageKeywords/mCommonKeyword.txt
+
+*** Test Cases ***
+Connect
+    mGetDevices    ${GalaxyS8}    ${JsonfilePath}    ${AppPackage}    ${AppActivity}

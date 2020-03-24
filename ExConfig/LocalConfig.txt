@@ -1,0 +1,12 @@
+*** Variables ***
+${lo_general_timeout}    30
+${lo_sms_timeout}    60
+${lo_AIS_Number}    0927099699
+${lo_IPSelenium}    http://localhost:4444/wd/hub
+${lo_path_chrome_extension}    D:/ArcadiaAtlas/Robot/AisRobotBuffet/Resource/ModHeader_2_1_1.crx
+${lo_IPWhiteList}    192.168.1.5
+${lo_SenderName_AIS3G}    AIS3G
+${lo_local_config_file_path}    ${CURDIR}\\ParallelLocalConfig.xml
+${lo_local_config_file_path_test}    ${CURDIR}\\..\\Config\\TestSiteParallelLocalConfig.xml
+${lo_Serenade_Prod_local_config_file_path}    ${CURDIR}\\..\\Config\\DigitalSerenadeWebProdParallelLocalConfig.xml
+${lo_DigitalSerenade_WebMobile_Test_local_config_file_path}    ${CURDIR}\\..\\Config\\DigitalSerenadeWebParallelLocalConfig.xml
