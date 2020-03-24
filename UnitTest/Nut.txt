@@ -8,3 +8,11 @@ Connect
     mVerifyChooseLanguage
     mSelectLanguage    TH
     mClickNext
+    mInputName    เธญเธญเนเธ•
+    mInputSurName    เน€เธ—เธช
+    mInputEmail    automate@gmail.com
+    mInputTel    0899999999
+    Swipe    0    800    0    0
+    Swipe    0    800    0    0
+    mSelectGender    MALE
+    mSelectTypePeople    THAI

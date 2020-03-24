@@ -1,5 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
+Library           String
 Library           Collections
 Library           OperatingSystem
 Resource          ../PageVariables/mCommonPageVariables.txt
@@ -63,6 +64,7 @@ mLoginLine
 
 mSelectLanguage
     [Arguments]    ${Language}
+    ${Language}    Convert To Uppercase    ${Language}
     BuiltIn.Run Keyword If    '${Language}' == 'EN'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangEN']
     ...    ELSE IF    '${Language}' == 'TH'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangTH']
     ...    ELSE IF    '${Language}' == 'CH'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangCH']
@@ -71,7 +73,37 @@ mVerifyChooseLanguage
     AppiumLibrary.Wait Until Element Is Visible    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangEN']    ${timeout}
 
 mClickNext
-    AppiumLibrary.Click Element    xpath=android.widget.LinearLayout[@resource-id='com.onesiam.siampiwat:id/llNext']
+    Wait Until Page Does Not Contain Element    xpath=android.widget.LinearLayout[@resource-id='com.onesiam.siampiwat:id/textNext']    ${timeout}
+
+mInputName
+    [Arguments]    ${Name}
+    Input Text    xpath=//android.widget.EditText[@resource-id='com.onesiam.siampiwat:id/editName']    ${Name}
+
+mInputSurName
+    [Arguments]    ${SurName}
+    Input Text    xpath=//android.widget.EditText[@resource-id='com.onesiam.siampiwat:id/editSurName']    ${SurName}
+
+mInputEmail
+    [Arguments]    ${Email}
+    Input Text    xpath=//android.widget.EditText[@resource-id='com.onesiam.siampiwat:id/editEmail']    ${Email}
+
+mInputTel
+    [Arguments]    ${Tel}
+    Input Text    xpath=//android.widget.EditText[@resource-id='com.onesiam.siampiwat:id/ediTel']    ${Tel}
+
+mSelectGender
+    [Arguments]    ${Gender}
+    ${Gender}    Convert To Uppercase    ${Gender}
+    BuiltIn.Run Keyword If    '${Gender}' == 'MALE'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageBgGenderLabel']
+    ...    ELSE IF    '${Gender}' == 'FEMALE'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageBgGenderFemale']
+    ...    ELSE IF    '${Gender}' == 'OTHER'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageBgGenderLabel']
+
+mSelectTypePeople
+    [Arguments]    ${Type}
+    ${Type}    Convert To Uppercase    ${Type}
+    BuiltIn.Run Keyword If    '${Type}' == 'THAI'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageBgThaiPeople']
+    ...    ELSE IF    '${Type}' == 'THAI'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageBgForeigner']
+    ...    ELSE IF    '${Type}' == 'THAI'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageBgTourist']
 
 mInputInformatiom
     [Arguments]    ${UserName}    ${Password}
