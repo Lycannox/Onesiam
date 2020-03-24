@@ -56,3 +56,17 @@ mLoginFacebook
     AppiumLibrary.Click Element    xpath=//android.view.View[@text='เข้าสู่ระบบด้วย facebook']
 
 mLoginLine
+    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[@text='เข้าสู่ระบบด้วย line']    ${timeout}
+    AppiumLibrary.Click Element    xpath=//android.view.View[@text='เข้าสู่ระบบด้วย line']
+
+mSelectLanguage
+    [Arguments]    ${Language}
+    BuiltIn.Run Keyword If    '${Language}' == 'EN'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangEN']
+    ...    ELSE IF    '${Language}' == 'TH'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangTH']
+    ...    ELSE IF    '${Language}' == 'CH'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangCH']
+
+mVerifyChooseLanguage
+    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.widget.TextView[@text='CHOOSELANGUAGE']    ${timeout}
+
+mClickNext
+    AppiumLibrary.Click Element    xpath=android.widget.LinearLayout[@resource-id='com.onesiam.siampiwat:id/llNext']
