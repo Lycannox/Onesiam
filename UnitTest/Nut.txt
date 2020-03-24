@@ -5,3 +5,5 @@ Resource          ../Resources/PageKeywords/mCommonKeyword.txt
 Connect
     mGetDevices    ${GalaxyS8}    ${JsonfilePath}    ${AppPackage}    ${AppActivity}
     mLoginFacebook
+    mSelectLanguage    TH
+    mClickNext
