@@ -1,5 +1,7 @@
 *** Settings ***
 Library           AppiumLibrary
+Library           Collections
+Library           OperatingSystem
 Resource          ../PageVariables/mCommonPageVariables.txt
 Resource          ../PageRepositorys/mCommonPageRepositorys.txt
 
@@ -66,7 +68,7 @@ mSelectLanguage
     ...    ELSE IF    '${Language}' == 'CH'    AppiumLibrary.Click Element    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangCH']
 
 mVerifyChooseLanguage
-    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.widget.TextView[@text='CHOOSELANGUAGE']    ${timeout}
+    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageLangEN']    ${timeout}
 
 mClickNext
     AppiumLibrary.Click Element    xpath=android.widget.LinearLayout[@resource-id='com.onesiam.siampiwat:id/llNext']

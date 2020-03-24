@@ -1,9 +1,10 @@
 *** Settings ***
-Resource          ../Resources/PageKeywords/mCommonKeyword.txt
+Resource          ../Resources/Mobile/Android/PageKeywords/mCommonKeyword.txt
 
 *** Test Cases ***
 Connect
     mGetDevices    ${GalaxyS8}    ${JsonfilePath}    ${AppPackage}    ${AppActivity}
     mLoginFacebook
+    mVerifyChooseLanguage
     mSelectLanguage    TH
     mClickNext
