@@ -72,3 +72,7 @@ mVerifyChooseLanguage
 
 mClickNext
     AppiumLibrary.Click Element    xpath=android.widget.LinearLayout[@resource-id='com.onesiam.siampiwat:id/llNext']
+
+mInputInformatiom
+    [Arguments]    ${UserName}    ${Password}
+    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.view.View[@text='เข้าสู่ระบบด้วย line']    ${timeout}

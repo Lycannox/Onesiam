@@ -1,0 +1,14 @@
+*** Settings ***
+Resource          ../Resources/Mobile/Android/PageKeywords/mCommonKeyword.txt
+
+*** Test Cases ***
+TestConnect
+    mGetDevices    Galaxy S8B    ${JsonfilePath}    ${AppPackage}    ${AppActivity}
+    mLoginFacebook
+    mVerifyChooseLanguage
+    mSelectLanguage    TH
+    AppiumLibrary.Wait Until Element Is Visible    xpath=//android.widget.ImageView[@resource-id='com.onesiam.siampiwat:id/imageProfile']
+    Comment    mLoginLine
+    Comment    mSelectLanguage
+    Comment    mSelectLanguage    TH
+    Comment    mClickNext
